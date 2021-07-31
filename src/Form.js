@@ -54,6 +54,8 @@ class Form extends Component {
                     </select>
                 </div>
 
+                <button type="submit">Submit</button>
+
             </form>
         )
     }
