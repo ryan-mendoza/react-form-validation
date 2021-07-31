@@ -5,7 +5,8 @@ class Form extends Component {
         super(props)
         this.state = {
             username: '',
-            comments: ''
+            comments: '',
+            topic: 'react' 
         }
     }
 
@@ -18,6 +19,12 @@ class Form extends Component {
     handleCommentsChange = (event) => {
         this.setState({
             comments: event.target.value
+        })
+    }
+
+    handleTopicChange = (event) => {
+        this.setState({
+            topic: event.target.value
         })
     }
 
@@ -37,6 +44,14 @@ class Form extends Component {
                     <textarea
                         value={this.state.comments}
                         onChange={this.handleCommentsChange}></textarea>
+                </div>
+                <div>
+                    <label>Topic</label>
+                    <select value={this.state.topic} onChange={this.handleTopicChange}>
+                        <option value="react">React</option>
+                        <option value="angular">Angluar</option>
+                        <option value="vue">Vue</option>
+                    </select>
                 </div>
 
             </form>
